@@ -8,6 +8,11 @@ type LoanEvaluator struct {
 	Customer dto.Customer
 }
 
+// Realiza a avaliação dos empréstimos elegíveis para o cliente, à partir de seus dados
+//
+// # Exige como parâmetro um dto.Customer
+//
+// Retorna um dto.LoanOutput
 func (l *LoanEvaluator) Execute(customer dto.Customer) dto.LoanOutput {
 	output := dto.LoanOutput{}
 	output.Customer = customer.Name

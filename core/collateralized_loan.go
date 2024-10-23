@@ -20,6 +20,9 @@ func (l *CollateralizedLoan) SetCustomer(customer dto.Customer) {
 	l.customer = customer
 }
 
+// Verifica se o cliente informado é elegível para este tipo de empréstimo
+//
+// Retorna true para elegível ou false para não elegível
 func (l *CollateralizedLoan) isElegible() bool {
 	switch {
 	case l.customer.Income <= 3000:

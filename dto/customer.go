@@ -37,6 +37,9 @@ func (c *CustomerBuilder) WithIncome(income int) *CustomerBuilder {
 	return c
 }
 
+// Devolve o objeto criado à partir dos métodos auxiliares anteriores
+//
+// Retorna um ponteiro do tipo Customer
 func (c *CustomerBuilder) Build() *Customer {
 	return &c.Customer
 }

@@ -18,6 +18,11 @@ func (l *PersonalLoan) SetCustomer(customer dto.Customer) {
 	l.customer = customer
 }
 
+// Verifica se o cliente informado é elegível para este tipo de empréstimo
+//
+// Retorna true para elegível ou false para não elegível
 func (l *PersonalLoan) isElegible() bool {
+	// Como no enunciado todos os clientes são elegíveis para empréstimos pessoais, então este método sempre retorna true.
+	// Caso as regras de elegibilidade mudem para empréstimos pessoais, a alteração a ser feita na verificação é somente aqui
 	return true
 }
